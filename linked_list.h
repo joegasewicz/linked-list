@@ -15,7 +15,7 @@ typedef struct List_ {
 	int		(*match)(const void *key1, const void *key2);
 	void		(*destroy)(void *data);
 	ListElement	*head;
-	ListElement	*tail;	
+	ListElement	*tail;
 } List;
 
 void list_init(List *list, void (*destroy)(void *data));
@@ -40,4 +40,5 @@ void *list_data(const ListElement *element);
 
 ListElement *list_next(const ListElement *element);
 
+#endif // LINKED_LIST_H
 
