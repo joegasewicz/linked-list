@@ -1,13 +1,22 @@
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
+#include <stdlib.h>
 #include <stdio.h>
 
 
-struct List{
+typedef struct ListElement_ {
+	void			*data;
+	struct ListElement_	*next;
+} ListElement;
 
-}
-
-struct ListElement{
-
-}
+typedef struct List_ {
+	int		size;
+	int		(*match)(const void *key1, const void *key2);
+	void		(*destroy)(void *data);
+	ListElement	*head;
+	ListElement	*tail;	
+} List;
 
 void list_init(List *list, void (*destroy)(void *data));
 
