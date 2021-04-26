@@ -1,7 +1,8 @@
 # Library specific
 test
-
-
+*.cbp
+linked-list/
+bin/
 # Prerequisites
 *.d
 
